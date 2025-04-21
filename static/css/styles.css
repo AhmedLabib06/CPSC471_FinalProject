@@ -1,0 +1,808 @@
+/* ========= Global Styles ========= */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #e50914;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1f1f1f;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  
+  
+  /* ========= Booking Page (booking.html) ========= */
+
+  .book-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background-color: #b00610;
+  }
+  
+  
+  .booking-container {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+  
+  .legend div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .legend .seat {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #999;
+  }
+  
+  
+  .screen {
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+  
+  #seat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .seat-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .seat.booked {
+    background-color: #c0392b;
+    color: white;
+  }
+  
+  .seat.selected {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .seat:hover {
+    border-color: #555;
+  }
+  
+  .seat.booked {
+    background-color: #c0392b;
+    color: white;
+  }
+  
+  .seat.selected {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  
+  .book-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background-color: #b00610;
+  }
+
+  
+  
+
+  /* ========== Admin Panel Styles ========== */
+
+.admin-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    color: #fff;
+  }
+  
+  .admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .admin-form h2 {
+    margin-top: 0;
+    color: #e50914;
+  }
+  
+  .admin-form input {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+  
+  .admin-form input::placeholder {
+    color: #aaa;
+  }
+  
+  .admin-form button {
+    padding: 12px;
+    background-color: #e50914;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .admin-form button:hover {
+    background-color: #b00610;
+  }
+
+  
+  /* ========== Modal Styles ========== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-overlay.active {
+    display: flex;
+  }
+  
+  .modal-content {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+  
+  .close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    background-color: #444;
+    color: #ccc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .close-btn:hover {
+    background-color: #666;
+  }
+
+  
+
+  /* ======= Bluish MaxStream-Like Theme ======= */
+
+body {
+  background: linear-gradient(to right, #0d1b2a, #1b263b);
+  font-family: 'Montserrat', sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======= Nav Bar ======= */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(13, 27, 42, 0.8);
+  padding: 15px 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00bfff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00bfff;
+}
+
+.search-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00bfff;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* ======= Hero Section ======= */
+.hero-section {
+  background: url('/static/img/hero-bg.jpg') center center / cover no-repeat;
+  padding: 60px 30px;
+  color: white;
+  border-bottom: 2px solid #1b263b;
+}
+
+.hero-content {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  color: #00bfff;
+}
+
+.hero-content p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ======= Section Title ======= */
+.section-title {
+  font-size: 1.4rem;
+  padding: 30px;
+  color: #ffffff;
+  border-left: 4px solid #00bfff;
+}
+
+/* ======= Movie Cards ======= */
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 30px 30px;
+  scroll-snap-type: none; /* disable horizontal scroll snapping */
+  overflow-x: hidden; /* remove horizontal scroll */
+}
+
+.movie-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.movie-grid::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 4px;
+}
+
+.movie-card {
+  flex: 0 0 auto;
+  width: 180px;
+  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00bfff22;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00bfff44;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+
+.movie-info {
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.movie-info h3 {
+  margin: 0 0 10px;
+}
+
+.book-btn {
+  background-color: #00bfff;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 8px;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #0099cc;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.tab-btn {
+  padding: 10px 20px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tab-btn.active {
+  background-color: #0af;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-buttons.centered {
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.section-title.centered {
+  justify-content: center;
+  text-align: center;
+  border-left: none;
+}
+
+.movie-grid.centered {
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-x: visible;
+}
+
+.date-section {
+  display: block;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.date-heading {
+  color: white;
+  text-align: left;
+  margin: 60px auto 10px 60px; 
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-left: 4px solid #00bfff;
+  padding-left: 15px;
+  width: fit-content; 
+}
+
+#movie-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  align-items: center;
+}
+
+.movie-date-group {
+  width: 100%;
+  text-align: center;
+}
+
+.movie-date-group h2 {
+  margin-bottom: 20px;
+  border-left: 3px solid #00bfff;
+  padding-left: 15px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.movie-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+/*========= Featured Movies Section ========*/
+
+.hero-section {
+  padding: 40px 30px 20px;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+
+.hero-overlay {
+  color: #00bfff;
+  margin-bottom: 10px;
+}
+
+.hero-overlay h2 {
+  color: #00bfff;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+body.login-split {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-left {
+  flex: 1;
+  background: #0a1a2f;
+}
+
+.login-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.form-box {
+  width: 300px;
+  padding: 40px;
+  text-align: left;
+}
+
+.form-box h1 {
+  color: #2176ff;
+  margin-bottom: 5px;
+}
+
+.form-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+input[type="email"], input[type="password"] {
+  width: 91%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-extras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.next-btn {
+  width: 100%;
+  background: linear-gradient(to right, #2176ff, #2150ff);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-cta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-cta a {
+  text-decoration: none;
+  color: #2176ff;
+  font-weight: 500;
+}
+
+.login-error {
+  color: #ff6b6b;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*========= Footer Section ========*/
+
+.footer {
+  background-color: #0b0e1a;
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  margin: 20px;
+}
+
+.footer h3 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: #8b61f6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+
+/* ===== Register Page Layout - Blue Theme ===== */
+
+body.register-page {
+  background-color: #0e1625;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container {
+  display: flex;
+  width: 95%;
+  max-width: 1100px;
+  height: 660px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Make the illustration taller */
+.register-image {
+  flex: 1;
+  background-color: #0a1321;
+}
+
+.register-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.register-form {
+  flex: 1;
+  background: #15253f;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-form h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.register-form input {
+  font-size: 15px;
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.login-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #adc9ff;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+  width: 94.5%;
+  padding: 12px 15px;
+  margin-bottom: 18px; /* Make all gaps consistent */
+  border-radius: 6px;
+  border: 1px solid #284872;
+  background-color: #284872;
+  color: #fff;
+  font-size: 14px;
+}
+
+.register-form input::placeholder {
+  color: #ccc;
+}
+
+.checkbox {
+  font-size: 13px;
+  color: #d0d8e4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox input {
+  margin: 0;
+}
+
+.create-account-btn {
+  width: 60%;
+  margin: 20px auto 0 auto; /* top | right | bottom | left */
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #4da0ff, #4a6cff);
+  color: #fff;
+  cursor: pointer;
+  display: block; 
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover {
+  background: linear-gradient(to right, #3f85e0, #3e5fd1);
+}
+
+.register-form a {
+  color: #5cd2e6;
+  text-decoration: none;
+}
+
+.register-form a:hover {
+  text-decoration: underline;
+  color: #42b6cc;
+}
+
+
+
+
+  

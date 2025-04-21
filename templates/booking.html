@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Seats</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Book Your Seats</h1>
+
+    <div class="screen">SCREEN</div>
+
+    
+    <div id="seat-container" class="seats-grid"></div>
+      <!-- Seats will be dynamically inserted here -->
+    
+
+    
+    <div class="legend">
+      <div><div class="seat"></div> <span>Available</span></div>
+      <div><div class="seat selected"></div> <span>Selected</span></div>
+      <div><div class="seat booked"></div> <span>Booked</span></div>
+    </div>
+
+    
+    <button class="book-btn" id="book-btn">Book Now</button>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

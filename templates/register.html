@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - MovieZone</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body class="register-page">
+  <div class="register-container">
+    <div class="register-image">
+      <img src="/static/img/register-illustration.png" alt="Scenic Illustration" />
+    </div>
+
+    <!-- ✅ Add onsubmit validation -->
+    <form class="register-form" method="POST" action="/register" onsubmit="return validateForm()">
+      <h2>Create an account</h2>
+      <p class="login-text">Already have an account? <a href="/login">Log in</a></p>
+
+      {% if error %}
+        <div class="error">{{ error }}</div>
+      {% endif %}
+
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email address" required />
+      <input type="password" name="password" placeholder="Enter your password" required />
+      <input type="password" name="confirm_password" placeholder="Confirm your password" required />
+
+      <label class="checkbox">
+        <input type="checkbox" required />
+        I agree to the <a href="/terms" target="_blank">terms & conditions</a>
+      </label>
+      
+
+      <button type="submit" class="create-account-btn">Create Account</button>
+    </form>
+  </div>
+
+  <!--  Single script block at end -->
+  <script>
+    function validateForm() {
+      const pw = document.querySelector('input[name="password"]').value;
+      const cpw = document.querySelector('input[name="confirm_password"]').value;
+      if (pw !== cpw) {
+        alert("Passwords do not match!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

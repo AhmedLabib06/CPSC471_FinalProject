@@ -1,0 +1,40 @@
+<!-- templates/admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel | MovieZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🛠️ Admin Panel</h1>
+  </header>
+
+  <main class="admin-container">
+    <form id="admin-form" class="admin-form">
+        <h2>Add New Movie</h2>
+        <input type="text" id="movie-name" placeholder="Movie Title" required />
+        <input type="text" id="genre-input" placeholder="Genre (e.g. Action)" required />
+        <input type="number" id="duration-input" placeholder="Duration (in minutes)" required />
+        <textarea id="description-input" placeholder="Movie Description" rows="4" required></textarea>
+        <select id="theatre-id">
+          <option value="1">Main Hall</option>
+          <option value="2">VIP Theater</option>
+        </select>
+        <input type="date" id="date-input" required />
+        <input type="time" id="time-input" class="form-input" step="1" />
+        <input type="text" id="image-name" placeholder="Poster image (e.g. Reacher.jpg)" />
+        <button type="submit">Add Showtime</button>
+      </form>      
+  </main>
+
+  <footer>
+    <p>© 2025 MovieZone. Admin Access</p>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

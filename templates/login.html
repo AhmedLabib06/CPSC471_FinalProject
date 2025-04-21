@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | MovieZone</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="login-split">
+  <div class="login-left">
+    <img src="/static/img/bg-illustration.png" alt="Scenic Night Illustration" />
+  </div>
+
+  <div class="login-right">
+    <div class="form-box">
+      <h1>HELLO!</h1>
+      <p>Welcome back! Please login to your account.</p>
+
+      {% if error %}
+        <div class="login-error">{{ error }}</div>
+      {% endif %}
+
+      <form method="POST" action="/login">
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="password" name="password" placeholder="Password" required />
+
+        <div class="form-extras">
+          <label><input type="checkbox" name="remember" /> Remember</label>
+        </div>
+
+        <button type="submit" class="next-btn">Next →</button>
+      </form>
+
+      <div class="register-cta">
+        <a href="/register">Create account</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

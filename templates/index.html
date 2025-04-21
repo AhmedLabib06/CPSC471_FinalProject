@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MovieZone | Now Showing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="main-nav">
+    <div class="logo">🎬 MovieZone</div>
+    <input type="text" placeholder="Search..." class="search-input" />
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-banner">
+      <img src="/static/img/featured.jpg" alt="Featured Poster">
+      <div class="hero-overlay">
+        <h1 class="section-title">Featuring : Avengers Endgame<p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe..</p></h1>
+      </div>
+    </div>
+  </section>
+  
+
+  <main class="movie-section">
+    <div class="tab-buttons centered">
+      <button class="tab-btn active" onclick="switchTab('now-showing')">Now Showing</button>
+      <button class="tab-btn" onclick="switchTab('coming-soon')">Coming Soon</button>
+    </div>
+  
+    <div id="now-showing" class="tab-content active">
+      <h2 class="section-title centered">Now Showing</h2>
+      <section class="movie-grid centered" id="movie-list">
+        <!-- Movies will load here via JS -->
+      </section>
+    </div>
+  
+    <div id="coming-soon" class="tab-content">
+      <h2 class="section-title centered">Coming Soon</h2>
+      <section class="movie-grid centered">
+        <!-- Placeholder for Coming Soon -->
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p><strong>Best Movie Watching Experience</strong><br>
+          Experience the best movie and latest movies<br>
+          Fast and Easy Ticket Booking System<br>
+          Premium Seats with Cozy Environment<br>
+          Dolby Vision & Dolby Atmos Experience
+        </p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p><strong>Phone Number</strong><br>
+          (+88) 09617660660<br>
+          01755665544
+        </p>
+        <p><strong>Email Address</strong><br>
+          <a href="mailto:info@cineplexbd.com">info@cineplexbd.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>More At MovieZone</h3>
+        <p><a href="#">Privacy & Policy</a></p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
